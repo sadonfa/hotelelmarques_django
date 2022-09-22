@@ -1,0 +1,59 @@
+{% extends '../layout/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+   
+       {% for ro in room %}
+       <div class="box_rooms">
+       <div class="box_image">
+            <img src="{{ ro.image.url }}" />
+        </div>    
+        <div class="box_description">
+            <h3> {{ ro.name }} </h3>
+            <p> {{ ro.description|safe }} </p>
+            
+        
+            <div class="box_detail_booking">
+                <div class="box_detail_item"> 
+                    <h4> Check-In </h4>
+                    <p> {{ checkin}}</p>
+                </div>
+
+                <div class="box_detail_item"> 
+                    <h4> Check-Out  </h4>
+                    <p> {{ checkout }}</p>
+                </div>
+
+                <div class="box_detail_item"> 
+                    <h4> Adultos: </h4> 
+                    <p> {{ adults }} </p>
+                </div>
+
+                {% if kids != '0' %}
+                <div class="box_detail_item"> 
+                    <h4> Niños: </h4> 
+                    <p>{{ kids }}</p>
+                </div>
+                {% endif %}
+
+                <div class="box_detail_item"> 
+                    <h4> Habitaciones</h4> 
+                    <p>{{ rooms }}</p>
+                </div>
+            </div>
+                
+            
+        </div>
+    <div class="box_booking">
+        <h1>{{ ro.cash }}</h1>
+        <a href="{% url 'data_booking' ro.id checkin checkout adults kids rooms %}">Reservar</a>
+        
+    </div>
+    </div>
+        {% endfor %} 
+        
+
+
+{% endblock %} 

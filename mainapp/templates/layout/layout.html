@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hotel </title>
+
+    <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <!-- Header Start -->
+
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html"><img src="{% static 'img/logo/logoGrisOsc.png' %}" alt=""></a>
+        </div>
+
+        <nav class="nav">
+            <ul id="navigation">
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="about.php">Nosotros</a></li>
+                <li><a href="{% url 'rooms' %}">Habitaciones</a></li>
+                <li><a href="contact.php">Contactos</a></li>
+            </ul>
+            <button class="btn">Reservar</button>
+        </nav>
+
+        <!-- Header End -->
+
+    </header>
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <!-- Footer Start-->
+        <div class="footer-container">
+
+            <div class="footer-data">
+
+                <!-- logo -->
+                <div class="footer-logo">
+                    <img src="{% static  'img/logo/logoBlanco.png' %}" alt="logo" />
+                </div>
+
+                <div class="footer-social footer-social2">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
+
+                <div class="footer-pera">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        Todos los derechos reservados
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-enlaces">
+                <h4>Enlaces Rapidos</h4>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Mejores Habitaciones</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Servicio de Piscina</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-booking">
+                <h4>Reservacion</h4>
+                <ul>
+                    <li><a href="#">Tel: 324 498 56 25</a></li>
+                    <!-- <li><a href="#">Skype: Marianabooking</a></li> -->
+                    <li><a href="#">info@hotelelmarquesdemanga.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Localizacion</h4>
+                <ul>
+                    <li><a href="#">Manga Cra 18A #26-117,</a></li>
+                    <li><a href="#">Cartagena, Bolivar</a></li>
+                </ul>
+                <!-- Form -->
+                <div class="footer-form">
+                    <div id="mc_embed_signup">
+                        <form target="_blank" method="get" class="subscribe_form ">
+                            <input type="1" name="email" placeholder="Correo" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer End-->
+    </footer>
+
+</body>
+
+</html>
