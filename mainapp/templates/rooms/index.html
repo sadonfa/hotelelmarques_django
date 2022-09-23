@@ -2,5 +2,28 @@
 {% load static %}
 
 {% block content %}
-<h1> Contenido </h1>
+
+<div class="header-rooms">
+    <div class="header-title">
+        <h1> {{ title_pag }} </h1>
+    </div>
+</div>
+<div class="rooms-content">    
+    {% for room in rooms %}    
+    <!-- Single Room -->      
+    <div class="single-room">
+            <div class="room-img">
+                <a href="rooms.html">
+                    <img src="{{ room.image.url }}" />
+                </a>
+            </div>
+            <div class="rooms-title">
+                <h3> {{ room.title }} </h3>
+            </div>
+    
+        </div>
+
+    {% endfor %}
+</div>
+
 {% endblock%}

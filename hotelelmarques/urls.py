@@ -17,10 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from mainapp import views
 from rooms import views as rooms
+from contact import views as contact
+from hotelelmarques import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index' ),
     path('home/', views.index, name='home' ),
-    path('rooms/',  rooms.rooms, name='rooms' )
+    path('rooms/',  rooms.rooms, name='rooms' ),
+    path('contact/', contact.contact, name='contact')
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

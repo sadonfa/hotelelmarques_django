@@ -303,6 +303,7 @@ body {
 .customar-area {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 200px;
     margin-bottom: 50px;
 }
@@ -329,7 +330,7 @@ body {
     max-width: 817px;
     margin-top: -60px;
     box-shadow: 0px 0px 70px #a5a5a5;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 15px;
     border: none;
 }
 
@@ -349,7 +350,7 @@ body {
 .service-experience {
     background: #262626;
     position: relative;
-    right: -380px;    
+    right: -380px;
     border-radius: 10px;
     box-shadow: 0.907px 12.968px 20px 0px rgba(85, 85, 85, 0.2);
     bottom: 0;
@@ -412,6 +413,376 @@ body {
     align-items: center;
 }
 
+
+
+/* ROOMS */
+
+.header-rooms {
+    position: relative;
+    z-index: 1;
+    height: 300px;
+    /* margin-top: 70px; */
+    margin-bottom: 100px;
+    background-color: #112e41;
+    background-image: url('../img/rooms/room12.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-rooms::before {
+    position: absolute;
+    content: "";
+    background-image: -moz-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    background-image: -webkit-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    background-image: -ms-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    opacity: 0.569;
+    width: 100%;
+    height: 130%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.header-title {
+    display: block;
+    margin: 0px auto;
+    width: 50%;
+    /* border: 1px solid #fff; */
+}
+
+
+.header-rooms h1 {
+    display: block;
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    font-family: 'Montserrat SemiBold';
+    font-size: 42px;
+    position: relative;
+    /* text-transform: uppercase; */
+}
+
+.header-title h1::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 4px;
+    background: white;
+    left: 0;
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+.rooms-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex: 20% 20%; */
+    justify-content: center;
+}
+
+.single-room {
+    flex: 0 0 22%;
+    max-width: 22%;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* border: 1px solid greenyellow; */
+}
+
+.single-room .room-img {
+    /* width: 400px; */
+    overflow: hidden;
+}
+
+.single-room .room-img img {
+    width: 100%;
+}
+
+.single-room:hover .room-img img {
+
+    transform: rotate(1deg) scale(1.1);
+
+}
+
+.rooms-title {
+    padding: 33px 20px 33px 30px;
+    box-shadow: 1.395px 19.951px 38px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.rooms-title:hover {
+    cursor: pointer;
+    border: 1px solid #c4c4c4;
+    border-top-color: rgb(196, 196, 196);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top: transparent;
+}
+
+.rooms-title h3 {
+    font-size: 25px;
+    color: #112e41;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+
+/* FIN DE ROOMS */
+
+/* DINNER AREA */
+
+.dining-area .single-dining-area {
+    position: relative;
+    padding: 150px 0;
+}
+
+.dining-area .single-dining-area.left-img {
+    position: relative;
+}
+
+
+.dining-area .single-dining-area.left-img::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    top: 0;
+    bottom: 0;
+    background-image: url('../img/dining/20220706_141758.jpg');
+    width: 50%;
+    border-radius: 0 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* .container {
+    max-width: 1200px;
+} */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.dining-area .dining-caption {
+    background: rgba(252, 252, 252, 0.95);
+    padding: 92px 98px 98px 96px;
+    border-radius: 5px;
+}
+
+.dining-area .dining-caption span {
+    color: #4c4c4c;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.dining-area .dining-caption h3 {
+    font-weight: 600;
+    color: #112e41;
+    margin-bottom: 30px;
+}
+
+.dining-area .dining-caption p {
+    margin-bottom: 56px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.dining-area .dining-caption a {
+    display: block;
+    text-decoration: none;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
+    align-items: center;
+}
+
+.dining-area .single-dining-area.right-img {
+    position: relative;
+}
+
+.dining-area .single-dining-area.right-img::before {
+    position: absolute;
+    right: 0;
+    content: "";
+    top: 0;
+    bottom: 0;
+    background-image: url('../img/dining/MG_7557.jpg');
+    width: 50%;
+    border-radius: 0 0 0 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.justify-content-end {
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+}
+
+.justify-content-start {
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/* FIN DINNER AREA  */
+
+
+
+.header-contact {
+    position: relative;
+    z-index: 1;
+    height: 300px;
+    /* margin-top: 70px; */
+    margin-bottom: 100px;
+    background-color: #112e41;
+    background-image: url('../img/rooms/room16.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-contact::before {
+    position: absolute;
+    content: "";
+    background-image: -moz-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    background-image: -webkit-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    background-image: -ms-linear-gradient(90deg, rgba(38, 47, 90, 0) 0%, rgba(26, 7, 1, 0.99) 56%, #1a0701 57%);
+    opacity: 0.569;
+    width: 100%;
+    height: 130%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.header-contact h1 {
+    display: block;
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    font-family: 'Montserrat SemiBold';
+    font-size: 42px;
+    position: relative;
+    /* text-transform: uppercase; */
+}
+
+
+.contact-section {
+    display: block;
+    padding: 50px 0 100px;
+}
+
+
+.container-contact {
+    width: 100%;
+    max-width: 70%;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row-contact {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.contact-form {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.data-contact {
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-left: 80px;
+}
+
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-contact textarea,
+.form-contact input {
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e6e9;
+    color: #e5e6e9;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.form-group .form-control {
+    width: 40%;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contact-info__icon i, .contact-info__icon span {
+    color: #8f9195;
+    font-size: 27px;
+  }
+
+.contact-info__icon {
+    margin-right: 40px;
+}
+
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+  }
 
 
 /* FOOTER */

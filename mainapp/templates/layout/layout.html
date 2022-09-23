@@ -8,8 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Hotel </title>
 
-    <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}" type="image/x-icon" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <script src="https://kit.fontawesome.com/e067cc9bf7.js" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -28,7 +32,7 @@
                 <li><a href="{% url 'index' %}">Inicio</a></li>
                 <li><a href="about.php">Nosotros</a></li>
                 <li><a href="{% url 'rooms' %}">Habitaciones</a></li>
-                <li><a href="contact.php">Contactos</a></li>
+                <li><a href="{% url 'contact' %}">Contactos</a></li>
             </ul>
             <button class="btn">Reservar</button>
         </nav>
